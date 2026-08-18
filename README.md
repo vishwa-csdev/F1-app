@@ -1,16 +1,78 @@
-# React + Vite
+# F1-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An F1 enthusiast web dashboard that provides quick stats: driver standings, constructor standings, race center, and simple detail pages for drivers and teams. Built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
+- Driver and constructor standings
+- Race center with recent race results
+- Detail pages for drivers and teams
+- Simple, client-side data hooks and API layer in `src/hooks.js` and `src/api.js`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
+- Languages: JavaScript, CSS, HTML
+- Framework: React (Vite)
+- Notable files: `src/`, `public/`, `package.json`, `vite.config.js`
 
-## React Compiler
+## Quick start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Prerequisites: Node.js 16+ and npm (or yarn/pnpm).
 
-## Expanding the Oxlint configuration
+Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+npm install
+```
+
+Start development server:
+
+```
+npm run dev
+```
+
+Open http://localhost:5173 in your browser (Vite default).
+
+Build for production:
+
+```
+npm run build
+```
+
+Preview the production build locally:
+
+```
+npm run preview
+```
+
+Lint (oxlint):
+
+```
+npm run lint
+```
+
+Notes
+- Use `npm ci` in CI environments to install from `package-lock.json`:
+  ```
+  npm ci
+  ```
+- If you use yarn or pnpm the equivalent commands are `yarn` / `yarn dev` or `pnpm install` / `pnpm dev`.
+- There are no required environment variables listed in `package.json`. If the app needs external API keys or base URLs, check `src/api.js` and add any required env var instructions to this README.
+
+## Project layout
+```
+src/
+  App.jsx            Main app shell and routing
+  main.jsx           App entry
+  api.js             Data fetching / API helpers
+  hooks.js           Lightweight data hooks
+  pages/             Home, Race, Drivers, Teams and detail pages
+  components/        Charts, TabBar, UI components
+public/              Static assets (icons, favicon)
+package.json         Project scripts and dependencies
+vite.config.js       Vite configuration
+```
+
+## Contributing
+Issues and pull requests are welcome. Keep changes focused and include a short description of any data or UI changes.
+
+## Legal / disclaimer
+This is an independent, open-source hobby project and is not affiliated with or endorsed by Formula 1 or any related trademark holders.
