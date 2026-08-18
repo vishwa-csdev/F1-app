@@ -1046,6 +1046,51 @@ a {
   margin-bottom: var(--space-md);
 }
 
+/* ── App Footer ── */
+
+.app-footer {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.footer-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.footer-github-link:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+.footer-github-link svg {
+  fill: currentColor;
+}
+
+.footer-disclaimer {
+  max-width: 680px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* ── Responsive: Desktop/Tablet ── */
 
 @media (min-width: 768px) {
